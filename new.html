@@ -1,0 +1,100 @@
+<!-- HTML - Hypertext Markup Language -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first webpage</title>
+</head>
+
+<body>
+    <style>
+        /* if an element has a class attribute, target it with dot = . */
+        /* if an element has an id attribute, target it with hash = # */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .container {
+            background: #0D1117;
+            width: 100%;
+            height: 100vh; /* vh = viewport height */
+            padding: 25px;
+        }
+
+        .first-text {
+            text-align: center;
+            color: #f6f6f6;
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .span {
+            color: #005BA4;
+            text-decoration: underline;
+        }
+
+        .title {
+            font-size: 75px;
+            color: #C3D0E5;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+        }
+
+        .download {
+            background:#005BA4;
+            color:white;
+            padding:14px;
+            margin: 10px;
+            border-radius: 7px;
+            font-size: 18px;
+            border: none;
+            transition: .5s;
+        }
+
+        .download:hover {
+            background:#044479;
+        }
+
+        .get {
+            background: #333940;
+            color: whitesmoke;
+            border: 1px solid whitesmoke;
+            padding: 14px;
+            font-size: 18px;
+            border-radius: 7px;
+            margin: 10px;
+        }
+
+    </style>
+
+    <div class="container">
+        <p class="first-text">Get <span class="span">Github Copilot Free</span> in VS Code</p>
+
+        <h1 class="title">Your Code Editor. <br /> Redefined with AI.</h1>
+
+        <div class="flex">
+            <button class="download">Download for Windows</button>
+            <button class="get">Get Copilot Free</button>
+        </div>
+
+        <p class="first-text"><span class="span">Web</span>, <span class="span">Insiders Edition</span>, or <span class="span">other platforms</span> </p>
+    </div>
+</body>
+
+</html>
+
+
+<!-- first thing to always do. declare the doctype and set it to html -->
+<!-- open an html opening and closing tag -->
+<!-- inside this html tag, create two tags. one for head and one for body -->
+<!-- head tag will contain all of the configurations of the site -->
+<!-- body tag will contain all of the content of the site -->
