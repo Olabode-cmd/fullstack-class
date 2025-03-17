@@ -6,6 +6,9 @@
     <title>Flexbox Section </title>
 
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
@@ -26,7 +29,7 @@
                 <p >Lorem ipsum dolor sit amet consectetur consectetur consectetur adipisicing elit. Autem accusamus cupiditate, eos odio debitis deleniti quaerat?</p>
                 <a href="#">Try now</a>
             </div>
-
+            
             <div class="flex-image">
                 <img src="images/hero-bg.jpg" alt="flex image" />
             </div>
@@ -34,12 +37,30 @@
 
         <div class="image-flex">
             <div class="big-card">
-                <p>big cards</p>
+                <h3 class="title">key features</h3>
+                
+                <div class="box">
+                    <div>
+                        <h3>Image-to-video conversion</h3>
+                        <p>Sometimes turn your photos into dynamic shots.</p>
+                    </div>
+                    <div class="line">
+                        <h3>Speech <br /> Integration</h3>
+                        <p>Sometimes turn your photos into dynamic shots.</p>
+                    </div>
+                    <div class="">
+                        <h3>Customization Templates</h3>
+                        <p>Sometimes turn your photos into dynamic shots.</p>
+                    </div>
+                </div>
             </div>
+
             <div class="cards-div">
                 <div class="flex-card">
-                    <div class="card">
-                        <h1>I</h1>
+                    <div class="card bottom">
+                        <div class="orange">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
                         <div>
                             <h2>300k</h2>
                             <p>Satisfied clients</p>
@@ -47,7 +68,9 @@
                     </div>
                     
                     <div class="card">
-                        <h1>I</h1>
+                        <div class="green">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
                         <div>
                             <h2>300k</h2>
                             <p>Satisfied clients</p>
@@ -56,6 +79,19 @@
                 </div>
             </div>
         </div>
+
+        <!-- <div class="flex">
+            <div class="box red">
+                red box
+            </div>
+            <div class="box blue">
+                blue box
+            </div>
+            <div class="box green">
+                red box
+            </div>
+        </div> -->
+        
     </div>
     
 </body>
