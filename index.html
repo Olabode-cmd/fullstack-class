@@ -13,6 +13,12 @@
             color: red;
         }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
         #header-2 {
             color: blue;
         }
@@ -41,21 +47,153 @@
         .img {
             width: 300px;
         }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* grid-template-columns: repeat(3, 1fr); */
+            gap: 10px;
+            padding: 15px 45px;
+            /* align-items: stretch; */
+            /* justify-content: center; */
+        }
+
+        .box {
+            padding: 15px 25px;
+            background: blue;
+            color: white;
+        }
+        .tall {
+            height: 200px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .red {
+            background: red;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .image-div {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .image-div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .image-div:hover img {
+            transform: scale(1.1);
+        }
+
+        a, a:hover {
+            text-decoration: none;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: black;
+            color: white;
+            padding: 10px 24px;
+
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
     </style>
 
-    <!-- form tags - form, input, button -->
-     <form class="flex">
-        <input class="input block" type="email" placeholder="Email address" />
+    <nav class="navbar">
+        <div>
+            <h3 class="brand">Logo</h3>
+        </div>
+        <div>
+           <a href="#">Features</a> 
+           <a href="#">Solutions</a> 
+           <a href="#">Resources</a> 
+           <a href="#">Pricing</a> 
+        </div>
+        <div>
+            <a href="#">Sign in</a>
+            <button>Get demo</button>
+        </div>
+    </nav>
 
-        <input class="input block" type="password" placeholder="Password" />
 
-        <button class="submit-btn block" type="submit">Log in</button>
-     </form>
+     <!-- CSS GRID -->
+    <!-- <div class="grid">
+        <div>
+            <div class="image-div">
+                <img src="featured-2.png" alt="feature image" class="image" />
+            </div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+        </div>
 
-     <!-- Image -->
-     <img src="images/img2/class-img.jpg" class="img" />
+        <div>
+            <div class="image-div">
+                <img src="featured1.png" alt="feature image" class="image" />
+            </div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+        </div>
+
+        <div>
+            <div class="image-div">
+                <img src="featured-2.png" alt="feature image" class="image" />
+            </div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+        </div>
+
+        <div>
+            <div class="image-div">
+                <img src="featured1.png" alt="feature image" class="image" />
+            </div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+        </div>
+
+        <div>
+            <div class="image-div">
+                <img src="featured-2.png" alt="feature image" class="image" />
+            </div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+        </div>
+        
+    </div> -->
+
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+    <img src="featured-2.png" alt="feature image" class="image" />
+
+
+
+    <!-- POSITIONING -->
+    <!-- relative -->
+    <!-- absolute -->
+    <!-- fixed -->
 </body>
-
 </html>
 
 

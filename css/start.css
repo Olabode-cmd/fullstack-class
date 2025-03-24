@@ -1,0 +1,20 @@
+/* Cascading Stylesheets */
+
+/* . and # */
+/* . is used to target elements with a class attribute */
+/* # is used to target elements with an id attribute */
+
+.title {
+    color: green
+}
+
+#title {
+    color: yellow !important
+}
+
+/* Inline */
+/* Internal */
+/* External */
+
+
+
