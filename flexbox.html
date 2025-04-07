@@ -3,83 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Section </title>
-
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Flexbox document</title>
 </head>
 <body>
-    <div class="container">
-        <div>
-            <h1 class="title">AI Powered Video <br /> <span>Creation Made Simple</span> </h1>
-            <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum modi, ad maxime atque aliquid distinctio, incidunt delectus mollitia ducimus et explicabo reiciendis dolorem.</p>
-        </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <div class="video-flex">
-            <div class="card dark">
-                <h1>Ready to create your stunning video?</h1>
-                <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio veritatis cumque fuga qui sunt quod tempora?</p>
-                <a href="#">Get started now</a>
-            </div>
+        img {
+            max-width: 100%;
+        }
 
-            <div class="card light">
-                <h1>Text to Video Generate</h1>
-                <p >Lorem ipsum dolor sit amet consectetur consectetur consectetur adipisicing elit. Autem accusamus cupiditate, eos odio debitis deleniti quaerat?</p>
-                <a href="#">Try now</a>
-            </div>
+        .box {
+            padding: 15px;
+            color: white;
             
-            <div class="flex-image">
-                <img src="images/hero-bg.jpg" alt="flex image" />
-            </div>
-        </div>
+        }
 
-        <div class="image-flex">
-            <div class="big-card">
-                <h3 class="title">key features</h3>
-                
-                <div class="box">
-                    <div>
-                        <h3>Image-to-video conversion</h3>
-                        <p>Sometimes turn your photos into dynamic shots.</p>
-                    </div>
-                    <div class="line">
-                        <h3>Speech <br /> Integration</h3>
-                        <p>Sometimes turn your photos into dynamic shots.</p>
-                    </div>
-                    <div class="">
-                        <h3>Customization Templates</h3>
-                        <p>Sometimes turn your photos into dynamic shots.</p>
-                    </div>
-                </div>
-            </div>
+        .box1 {
+            /* height: 200px; */
+            /* flex: 1; */
+            flex: 1;
+        }
+        .box2 {
+            /* height: 50px; */
+            flex: 1;
+        }
+        .box3 {
+            height: 500px;
+    
+            flex: 1;
+        }
+        .box4 {
+            height: 400px;
+            height: 50px;
 
-            <div class="cards-div">
-                <div class="flex-card">
-                    <div class="card bottom">
-                        <div class="orange">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div>
-                            <h2>300k</h2>
-                            <p>Satisfied clients</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="green">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div>
-                            <h2>300k</h2>
-                            <p>Satisfied clients</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            flex: 2;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            gap: 20px;
+
+        }
+
+.two{
+    grid-column: span 3;
+}
+
+.one {
+    grid-column: span 2;
+}
+@media (max-width:500px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* @media (max-width:500px)  {
+  .container {
+    grid-template-columns: 1fr;
+  }
+} */
         
+    </style>
+
+    <div class="container">
+        <div class="box box1">
+            <img src="featured-2.png" alt="featured-2">
+            
+        </div>
+        <div class="box box2">
+            <img src="featured1.png" alt="featured">
+        </div>
+        <div class="box box3">
+        <img src="featured1.png" alt="featured">
+        </div>
+        <img src="featured-2.png" alt="featured">
+
     </div>
 </body>
 </html>

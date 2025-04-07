@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0
+            padding 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            gap: 15px;
+        }
+
+        /* .container div {
+            padding: 20px;
+            background: green;
+        } */
+
+        .five {
+            grid-column: span 2;
+        }
+        .one {
+            grid-column: span 3;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        } */
+
+        
+    </style>
+
+    <!-- Media Query -->
+    <!-- It is a CSS toolkit that allows you to tweak or adjust
+    how certain elements look on different screen sizes 
+    -->
+
+    <div class="container">
+        <div>
+            <img src="featured-2.png" alt="featured" />
+        </div>
+        <div>
+            <img src="featured1.png" alt="featured" />
+        </div>
+        <div>
+            <img src="featured-2.png" alt="featured" />
+        </div>
+        <div>
+            <img src="featured1.png" alt="featured" />
+        </div>
+        <div><img src="featured-2.png" alt="featured" /></div>
+        <div><img src="featured1.png" alt="featured" /></div>
+    </div>
+
+    <!-- <header>
+        <nav></nav>
+    </header>
+    <main>
+        <section></section>
+        <section></section>
+        <section></section>
+    </main>
+    <footer></footer> -->
+</body>
+</html>

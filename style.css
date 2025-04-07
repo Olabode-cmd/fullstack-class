@@ -1,0 +1,113 @@
+/* Selectors */
+
+/* the dot - . = class attributes*/
+/* the hash - # = id attributes */
+
+/* * - asteric = used to select EVERY element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Selectors */
+
+.text {
+    color: blue;
+    text-align: center;
+    font-size: 24px;
+}
+
+#title {
+    color: red;
+}
+
+.second-title {
+    color: purple;
+    text-align: center;
+    padding: 60px;
+    background: black;
+    font-size: 24px;
+    font-weight: 600;
+
+    /* border: the width, type, color */
+    border: 8px solid blue;
+}
+
+#third-title {
+    color: red;
+    text-align: center;
+    background: lightblue;
+}
+
+/* Properties */
+/* color, text-align, font-size */
+
+/* background, margin, padding, font-weight, border */
+
+/* Padding is the spacing within an element, i.e the
+space between the border and the content of the 
+element
+*/
+
+/* Margin is the spacing around an element that
+separates that element from other elements on
+the page */
+
+/* Display property */
+/* It dictates how much space the element is
+allowed to take up */
+
+/* Inline - take up as much space as they need */
+/* Block - take up as much space as is available */
+.container {
+    width: 100%;
+    height: 100vh; 
+    /* viewport height: 100vh = 100% of the screen height */
+    background: darkslategray;
+    padding: 20px;
+}
+.input {
+    display: block;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(210, 207, 207);
+    font-size: 15px;
+}
+
+.login-box {
+    width: 450px;
+    background: white;
+    /* padding: 45px */
+
+    /* first value = top/bottom, second = left/right */
+    padding: 45px 30px;
+
+    border-radius: 5px;
+    margin: auto;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background: rgb(101, 212, 101);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Create a form for Registration */
+/* It should have input for first name, last name, email, phone number
+and password. */

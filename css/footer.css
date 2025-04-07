@@ -63,3 +63,22 @@ footer .big-grid .small-grid {
 .small-flex a {
     color: #111;
 }
+
+.big-bg {
+    background: url('../images/hero-bg.jpg');
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+}
+
+.box {
+    background-color: green;
+    color: white;
+    position: absolute;
+    width: 400px;
+    bottom: 40%;
+    right: 40%;
+    padding: 15px 20px;
+    /* transform: translate(-50%, -50%); */
+}
+/* git pull */

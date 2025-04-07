@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Document</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div>
+                    <h1>Welcome back, Julia</h1>
+                    <p>You have <span>2 new reminders</span> today</p>
+                </div>
+
+                <div class="btn-container">
+                    <button class="flex-btn bg">
+                        <i class="fa-solid fa-box-open"></i>
+                        <span>Default</span>
+                    </button>
+                    <button class="flex-btn">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span>Calendar</span>
+                    </button>
+                    <button class="flex-btn">
+                        <i class="fa-solid fa-building-user"></i>
+                        <span>Organization</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="card-grid">
+                <!-- Reminders Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Reminders</h1>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <hr />
+                    <div class="card-body">
+                        <div class="space-y">
+                            <div class="flex-body">
+                                <div>
+                                    <h3>WARE Brand Meeting</h3>
+                                    <p>Today - 10:00 AM</p>
+
+                                    <div class="new">new</div>
+                                </div>
+
+                                <div class="meeting-icon">
+                                    <i class="fa-solid fa-video"></i>
+                                    <span>Meeting</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Shout out Card -->
+                <div class="card shoutout">
+                    <div class="card-header">
+                        <h1>Shout out</h1>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <hr />
+                    <div class="card-body">
+                        <div class="space-y">
+                            <div class="flex-body">
+                                <div>
+                                    <div class="flex-div">
+                                        <span class="blue">JG</span>
+                                        <div>
+                                            <h3>Outstanding productivity</h3>
+                                            <p>James Gray - Backend Developer</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray">
+                                        <p class="italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Quisquam, quos.</p>
+
+                                        <div class="flex-comment">
+                                            <p>FROM: Thoms Clarke</p>
+
+                                            <div class="flex-clap">
+                                                <span>5</span>
+                                                <i class="fa-solid fa-hands-clapping"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Employees Card -->
+                <div class="card shoutout">
+                    <div class="card-header">
+                        <h1>Employees</h1>
+
+                        <div class="flex-search">
+                            <button class="flex-btn">
+                                <span>View</span>
+                                <i class="fa-solid fa-arrow-up-long arr-transform"></i>
+                            </button>
+                            <i class="fa-solid fa-search"></i>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="card-body">
+                        <div class="space-y">
+                            <div class="flex-body">
+                                <div>
+                                    <div class="flex-div">
+                                        <span class="blue">JG</span>
+                                        <div>
+                                            <h3>Outstanding productivity</h3>
+                                            <p>James Gray - Backend Developer</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray">
+                                        <p class="italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Quisquam, quos.</p>
+
+                                        <div class="flex-comment">
+                                            <p>FROM: Thoms Clarke</p>
+
+                                            <div class="flex-clap">
+                                                <span>5</span>
+                                                <i class="fa-solid fa-hands-clapping"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
