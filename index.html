@@ -1,168 +1,34 @@
-<!-- HTML = HyperText Markup Language -->
+<!-- HTML - Hypertext Markup Language -->
+
+<!-- Tags -->
+<!-- p is an HTML element and it is used to render a paragraph of text -->
+
+<!-- BOILERPLATE -->
+<!-- An HTML Boilerplate is the basic structure the HTML document must take -->
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>My first document</title>
+    <title>My First HTML Document</title>
 </head>
-
 <body>
-    <style>
-        /* . for classes, # for id */
-        .header-1 {
-            color: red;
-        }
+    <p class="paragraph" id="ptext">This is a simple paragraph for HTML</p>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
+    <!-- Header tags -->
+    <!-- h1, h2, h3, h4, h5, h6 -->
 
-        #header-2 {
-            color: blue;
-        }
+    <!-- Attributes -->
+    <!-- class, id, src, href, alt, title, style, target, type, value -->
+    <!-- Types of Tags -->
+    <!-- Open & Close -->
+    <p>This is another paragraph</p>
+    <!-- Self closing tags -->
+    <img src="featured1.png" alt="featured image" />
 
-        /* .input {
-            display: block;
-        } */
-
-        .submit-btn {
-            color: white;
-            background: blue;
-            font-size: 18px;
-            padding: 12px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition:  .5s;
-            width: 200px;
-        }
-        .submit-btn:hover {
-            background: red;
-            width: 230px;
-        }
-
-        .img {
-            width: 300px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            /* grid-template-columns: repeat(3, 1fr); */
-            gap: 10px;
-            padding: 15px 45px;
-            /* align-items: stretch; */
-            /* justify-content: center; */
-        }
-
-        .box {
-            padding: 15px 25px;
-            background: blue;
-            color: white;
-        }
-        .tall {
-            height: 200px;
-        }
-
-        .flex {
-            display: flex;
-        }
-
-        .red {
-            background: red;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        .image-div {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            overflow: hidden;
-            border-radius: 15px;
-        }
-
-        .image-div img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: .5s;
-        }
-
-        .image-div:hover img {
-            transform: scale(1.1);
-        }
-
-        a, a:hover {
-            text-decoration: none;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: black;
-            color: white;
-            padding: 10px 24px;
-
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-    </style>
-
-    <nav class="navbar">
-        <div>
-            <h3 class="brand">Logo</h3>
-        </div>
-        <div>
-           <a href="#">Features</a> 
-           <a href="#">Solutions</a> 
-           <a href="#">Resources</a> 
-           <a href="#">Pricing</a> 
-        </div>
-        <div>
-            <a href="#">Sign in</a>
-            <button>Get demo</button>
-        </div>
-    </nav>
-
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-    <img src="featured-2.png" alt="feature image" class="image" />
-
-
-    <footer>
-        <div class="big-grid">
-            <div></div>
-            <div></div>
-        </div>
-    </footer>
-
-
-
-    <!-- POSITIONING -->
-    <!-- relative -->
-    <!-- absolute -->
-    <!-- fixed -->
+    <form>
+        <input type="email" placeholder="Email address" id="email" required />
+        <input type="password" placeholder="Password" id="password" required />
+        <button type="submit">Login</button>
+        <!-- types = text, email, password, number, date, datetime, checkbox, radio, search, submit -->
+    </form>
 </body>
 </html>
-
-
-<!-- boilerplate -->
