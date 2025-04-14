@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paystack Tailwind Demo</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+        * {
+            font-family: "Rubik", sans-serif;
+        }
+    </style>
+    <div class="bg-[#0D2A45] min-h-screen">
+        <div class="w-[95%] md:w-[50%] xl:w-[40%] mx-auto">
+            <div class="py-6">
+                 <img src="images/paystack.svg" alt="logo" class="w-[140px] mx-auto" />
+            </div>
+
+            <form class="bg-white px-8 py-6 rounded-lg w-full">
+                <h1 class="text-gray-400 text-md uppercase text-center">log into your account</h1>
+
+                <div class="space-y-3 mt-6">
+                    <input type="email" placeholder="Email address" id="email"
+                        class="p-3 border border-gray-100 rounded-md text-sm placeholder-gray-400 w-full focus:outline-none" />
+                    
+                    <input type="password" placeholder="Password" id="password"
+                        class="p-3 border border-gray-100 rounded-md text-sm placeholder-gray-400 w-full focus:outline-none" />
+
+                    <button class="bg-[#6CC986] w-full rounded-md p-3 text-white cursor-pointer" type="submit">Log in</button>
+                </div>
+
+                <a href="#" class="text-blue-600 text-center block text-base mt-6 font-medium">Log in with Passkey</a>
+            </form>
+
+            <div class="py-4 text-center">
+                <p class="text-base font-medium text-gray-400">New to Paystack? <a href="#" class="text-gray-300 hover:underline">Sign up</a> </p>
+                <a href="#" class="text-gray-300 hover:underline">Forgot your password?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
