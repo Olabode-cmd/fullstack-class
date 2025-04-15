@@ -8,7 +8,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 <body>
-    <div class="w-[65%] mx-auto pt-28">
+    <style>
+        .box {
+            background: linear-gradient(to right, red, blue, yellow, cyan, indigo, green);
+            background-size: 1200%;
+            background-position: 0%; /* left */
+            /* background-position: left or 0% */
+            /* to right or 100% */
+
+            /* center = 50% */
+            transition: .5s;
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+            clip-path: polygon(0 0, 100% 0, 100% 40%, 1% 67%);
+        }
+
+        @keyframes slide {
+            0% {
+                background-position: 0%;
+            }
+            50% {
+                background-position: 100%;
+            }
+            100% {
+                background-position: 0%;
+            }
+        }
+
+        /* .box:hover {
+            background-position: 100%;
+        } */
+
+        /* KEYFRAMES */
+        /* Keyframes is a CSS method for animating HTML elements */
+
+        
+    </style>
+    <!-- <div class="w-[65%] mx-auto pt-28">
         <h1 class="text-6xl text-center">Discover the world’s <br /> top designers</h1>
         <p class="text-center mt-6 text-lg">Explore work from the most talented and accomplished designers <br /> ready to take on your next project</p>
     
@@ -40,6 +78,11 @@
             </div>
         </div>
     
+    </div> -->
+
+    <!-- clip path -->
+    <div class="box text-white w-full min-h-screen px-6 py-5 mt-6">
+        clip path box
     </div>
 
 </body>
