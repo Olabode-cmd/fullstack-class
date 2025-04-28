@@ -1,39 +1,137 @@
-<!-- HTML - Hypertext Markup Language -->
-
-<!-- Tags -->
-<!-- p is an HTML element and it is used to render a paragraph of text -->
-
-<!-- BOILERPLATE -->
-<!-- An HTML Boilerplate is the basic structure the HTML document must take -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>My First HTML Document</title>
 </head>
 <body>
-    <p class="paragraph" id="ptext">This is a simple paragraph for HTML</p>
-
-    <!-- Header tags -->
-    <!-- h1, h2, h3, h4, h5, h6 -->
-
-    <!-- Attributes -->
-    <!-- class, id, src, href, alt, title, style, target, type, value -->
-    <!-- Types of Tags -->
-    <!-- Open & Close -->
-    <p>This is another paragraph</p>
-    <!-- Self closing tags -->
-    <img src="featured1.png" alt="featured image" />
-
-    <form>
-        <input type="email" placeholder="Email address" id="email" required />
-        <input type="password" placeholder="Password" id="password" required />
-        <button type="submit">Login</button>
-        <!-- types = text, email, password, number, date, datetime, checkbox, radio, search, submit -->
-    </form>
+    <h1>BEGINNER'S JAVASCRIPT</h1>
 
 
-    <div clas>
-        clip path box
-    </div>
+
+    <script>
+        // Javascript Class
+
+        // Variables
+        // A variable is a name for storing data values.
+
+        
+        // console.log(name)
+        // console.log
+
+        // var ,let, const
+
+        var firstName = "Michael" // old javascript versios ES5
+
+        let secondName = "Smith"
+        // console.log(secondName)
+        // secondName = "Doe"
+        // console.log(secondName)
+
+        // Whenever you declare a variable with let and var, you can change the 
+        // value of that variable later in the code.
+
+        // const thirdName = "John"
+        // console.log(thirdName)
+        // thirdName = "Michael"
+
+        // Data types
+
+        // Primitive data types
+        // 1. String
+        // 2. Number
+        // 3. Boolean
+        // 4. Undefined
+        // 5. Null
+
+        // Non-primitive data types
+        // 6. Array
+        // 7. Object
+        // 8. Function
+
+        // 1. Strings
+        // A string is a sequence of characters (alphabets, numbers, and symbols)
+        // enclosed in quotes.
+        let name = "John"
+        // console.log(typeof name)
+
+        // 2. Numbers
+        // A number is a numeric value (integer or decimal) without quotes.
+        let age = 25
+        const secondAge = 21
+        // let age = "25"
+        // console.log(typeof age)
+        // console.log(age + secondAge)
+
+        // 3. Boolean
+        // Boolean is a data type that can have only two values: true or false.
+
+        let isOldEnough = true // or false
+        // console.log(typeof isOldEnough)
+
+        // 4. Undefined
+        // Undefined is a data type that indicates a variable has been declared
+        // but not assigned a value.
+
+        let lastName;
+        console.log(typeof lastName)
+
+        // 5. Null
+        // Null is a data type that represents the intentional absence of any value.
+
+        let otherName = null
+
+
+        // 6. Array
+        // An array is a special variable that can hold more than one value at a time.
+
+        let students = ["Mr Loius", "Esosa", "Daniel", "Michael", "John"]
+        console.log(students);
+
+        // One thing you should know about arrays is that they are zero-indexed.
+        // This means that the first element in an array is at index 0, the second element is at index 1, and so on.
+
+        // console.log(students[3])
+        // console.log(students.length)
+        // console.log(students.slice(0,3))
+        // console.log(students[1] + ' and ' + students[4] + ' are good students.')
+
+        // 7. Object
+        // An object is a collection of properties, where
+        // each property is defined as a key-value pair.
+
+        let esosa = {
+            firstName: "Esosa",
+            lastName: "Omoregie",
+            age: 25,
+            isOldEnough: true,
+            friends: ["Naomi", "Michael", "John"],
+        }
+
+        let teslaModel = {
+            model: "Model S",
+            year: 2022,
+            color: "red",
+            price: 79999,
+            isElectric: true,
+        }
+
+        console.log(esosa)
+        // console.log(esosa.isOldEnough)
+
+        // Classwork
+
+        // Create an object called teacher with the properties 
+        // applicable to a teacher
+        // Make sure you use all data types
+
+        // e.g arrays for the students under the teacher
+        // e.g objects for the teacher's details
+        // e.g strings for the teacher's name, subject, etc.
+        // e.g numbers for the teacher's age, years of experience, etc.
+        // e.g booleans for the teacher's isOldEnough, isMarried, etc.
+
+
+        // then create an array containing 3 different teachers
+    </script>
 </body>
 </html>

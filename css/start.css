@@ -1,20 +1,85 @@
-/* Cascading Stylesheets */
+/* CASCADING STYLESHEETS */
 
-/* . and # */
-/* . is used to target elements with a class attribute */
-/* # is used to target elements with an id attribute */
-
-.title {
-    color: green
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#title {
-    color: yellow !important
+/* Selectors */
+
+/* * - every single element in your HTML document */
+/* . - dot selector and it is used to select elemnents with a class attrbute */
+/*  # - hash selector and it is used to select elements with an ID attribute */
+
+/* button {
+    background: green;
+} */
+
+/* #clickme {
+    background: blue;
+    padding: 20px;
+    color: white;
 }
 
-/* Inline */
-/* Internal */
-/* External */
+.btn {
+    background: purple;
+    padding: 10px;
+    color: black;
+} */
 
+/* Nested styling */
+/* h1 {
+    color: pink;
+} */
 
+/* .page-wrapper h1 {
+    color: pink
+} */
+.page-wrapper {
+    background: blue;
+    width: 100%;
+    height: 100vh; /* viewport height - */
+    padding-top: 60px;
+}
 
+.login-box {
+    width: 500px;
+    background: white;
+    margin: auto;
+    padding: 50px;
+}
+
+form h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background: blue;
+    color: white;
+}
+
+/* margin and padding */
+/* whenever you give an element a fixed width, setting the margin
+to auto places it in the perfect center */
+
+/* display */
+/* the display property dictates how elements align themselves
+on the page, relative to other elements */
+
+/* inline - when elements have a display of inline, they only take
+up as much space as they need */
+
+/* block - when elements have a display of block, they take up as
+much horizontal space as possible */
