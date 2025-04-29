@@ -20,9 +20,9 @@
 
         // var ,let, const
 
-        var firstName = "Michael" // old javascript versios ES5
+        // var firstName = "Michael" // old javascript versios ES5
 
-        let secondName = "Smith"
+        // let secondName = "Smith"
         // console.log(secondName)
         // secondName = "Doe"
         // console.log(secondName)
@@ -51,7 +51,7 @@
         // 1. Strings
         // A string is a sequence of characters (alphabets, numbers, and symbols)
         // enclosed in quotes.
-        let name = "John"
+        // let name = "John"
         // console.log(typeof name)
 
         // 2. Numbers
@@ -72,8 +72,8 @@
         // Undefined is a data type that indicates a variable has been declared
         // but not assigned a value.
 
-        let lastName;
-        console.log(typeof lastName)
+        // let lastName;
+        // console.log(typeof lastName)
 
         // 5. Null
         // Null is a data type that represents the intentional absence of any value.
@@ -132,6 +132,118 @@
 
 
         // then create an array containing 3 different teachers
+
+
+        // DAY 2
+
+        // CONCATENATION AND STRING LITERALS
+        // CONCATENATION
+        let firstName = "John"
+        let lastName = "Steve"
+
+        // console.log("Hello. My name is " + firstName + " " + lastName + ".")
+
+        // STRING LITERAL
+        // console.log(`Hello. My name is ${firstName} ${lastName}.`)
+        // FUNCTIONS
+
+        // A function is a reusable block of code designed to perform a task.
+        // A function is executed when something invokes it (calls it).
+
+        function greetings() {
+            // console.log("Hello everyone")
+        }
+
+        greetings(); // invoke the function
+
+        // Parameters in functions
+        function greet(name) {
+            // console.log("Hello ", name)
+        }
+
+        // greet("Esosa")
+        // greet("Naomi")
+        // greet("Mr Louis")
+
+        function addNumbers(num1, num2) {
+            let sum = num1 + num2;
+            // console.log("The sum of " + num1 +" and " + num2 + " is " + sum)
+        }
+
+        // addNumbers(10, 20);
+        // addNumbers(5, 8);
+
+        function subtract(num1, num2) {
+            let minus = num1 - num2;
+            // console.log(`The value of the subtraction of ${num1} and ${num2} is ${minus}`)
+        }
+
+        // subtract(50, 20);
+
+        // Write a function with 4 parameters
+        // add number 1 and number 2
+        // Subtract number 3 and number 4
+
+        // Multiply the 2 products
+        // Console log it.
+
+        function calculation(num1, num2, num3, num4) {
+            let sum = num1 + num2;
+            let minus = num3 - num4
+            let product = sum * minus
+
+            console.log(`The sum of ${num1} and ${num2} is ${sum}. ${num3} subtracted from ${num4} is ${minus}. The product of ${sum} and ${minus} is ${product}`)
+
+        }
+
+        // calculation(21, 32, 1, 90);
+        // calculation(45, 90, 34, 21);
+        // calculation(53, 23, 78, 12)
+
+        // CONDITIONALS
+        // A conditional is a piece of code that runs only when a certain condition is satisfied.
+        // There are different types and we start with the If-Else Statement
+
+        let studentAge = 21;
+
+        // if (studentAge < 18) {
+        //     console.log("The student is not old enough to drink")
+        // } else {
+        //     console.log("The student is old enough to drink.")
+        // }
+
+        if (studentAge < 18) {
+            console.log("The student is not old enough to drink")
+        } else if (studentAge == 18) {
+            console.log("The student can now drink but gently")
+        } else {
+            console.log("The student is old enough to drink.")
+        }
+
+        // Classwork
+
+        // declare a temperature variable
+        // if temperature is less than 24, console "it is cold"
+        // if temperature is between 24 and 32, console "it is warm"
+        // if temperature is greater than 32 ,console "it is hot"
+
+        // AND - &&
+        // OR - ||
+
+        function greetMe() {
+            let name = prompt('Tell me your name');
+            console.log(`Hello there ${name}`)
+        }
+
+        // greetMe();
+
+        // Assigment
+        // Ask the user for their name
+        // Ask the user for the temperature today
+
+        // if temperature is less than 24, console "it is cold"
+            // if temperature is between 24 and 32, console "it is warm"
+        // if temperature is greater than 32 ,console "it is hot" 
     </script>
 </body>
 </html>
