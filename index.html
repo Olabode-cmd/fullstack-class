@@ -243,7 +243,140 @@
 
         // if temperature is less than 24, console "it is cold"
             // if temperature is between 24 and 32, console "it is warm"
-        // if temperature is greater than 32 ,console "it is hot" 
+        // if temperature is greater than 32 ,console "it is hot"
+
+        function checkTemperature() {
+            const name = prompt("What is your name?")
+            const temperature = prompt("What is the temperature today?")
+
+            if (temperature < 24) {
+                alert(`${name}, the temperature is cold today. Take care.`)
+            } else if (temperature > 24 && temperature < 32) {
+                alert(`${name}, the temperature is warm today.`)
+            } else if (temperature >= 32) {
+                alert(`${name}, it is very hot today. Have a cold drink`)
+            } else {
+                alert("Invalid temperature.")
+            }
+        }
+
+        // checkTemperature();
+
+        //  4 % 2, 
+
+        // Create a function that checks if a number is even or odd.
+        // if number % 2 == 1, is odd, else if == 0, then is even,
+        //  else, "not a valid number"
+
+        // function oddOrEven() {
+        //     const number = prompt("Enter a number");
+
+        //     if (number % 2 == 0) {
+        //         alert(`${number} is an even number`)
+        //     } else if (number % 2 == 1) {
+        //         alert(`${number} is an odd number`)
+        //     } else {
+        //         alert("Invalid number")
+        //     }
+        // }
+
+        // Create a function that takes in 2 numbers as parameters
+        // Alert the greater number
+
+        // if number1 > number2
+        // function checkGreaterNumber() {
+        //     const number1 = prompt("Enter number 1")
+        //     const number2 = prompt("Enter number 2")
+        // }
+
+        
+
+        function checkGreaterNumber() {
+            const number1 = prompt("Enter number 1")
+            const number2 = prompt("Enter number 2")
+             // Ternary operator
+            number1 > number2 ? alert(`${number1}`) : alert(`${number2}`);
+        }
+
+        // checkGreaterNumber()
+
+        // Ternary Operator
+        // A ternary operator is a short form of if-else statment
+        // used to check for a single condition.
+
+        // It uses a simple format => 
+        // condition ? conditionIfTrue : conditionIfFalse
+
+
+        // Create a variable called username
+        // Create a variable called password
+
+        // Ask the user to enter a username
+        // Ask the user to enter a password
+
+        // if values match, alert Login successful
+        // If username is correct but password is wrong, alert "Wrong password"
+        // if username is wrong but password is correct, alert "Wrong username"
+        // if username and password are both wrong, alert "Invalid credentials"
+
+        let username = 'Admin101' // global variable
+        let password = '1234567'
+
+        function Login() {
+            let promptUsername = prompt("Enter your username") // local variable
+            let promptPassword = prompt("Enter your password");
+
+            if (promptUsername == username && promptPassword == password) {
+                alert('Login successful')
+            } else if (promptUsername == username && promptPassword !== password) {
+                alert('Wrong password')
+            } else if (promptUsername !== username && promptPassword == password) {
+                alert("Wrong username")
+            } else if (promptUsername !== username && promptPassword !== password) {
+                alert("invalid credentials")
+            } else {
+                alert("Try again later")
+            }
+        }
+
+        // Login()
+
+        // Write a function getGrade that takes a test score as parameters and prints the corresponding grade.
+        // A = Excellent (95 - 100), 
+        // B = Very good (85 - 94), 
+        // C = Good (70 - 84), 
+        // D = "Pass" (50 -69), 
+        // E = "Poor" (40 - 49), 
+        // F = Fails, lower than 40
+
+        // getGrade(67)
+
+        function getGrade(grade) {
+            if (grade > 95 && grade < 100) { // grade > 95 && grade < 100
+                alert('Excellent')
+            } else if (grade >= 85 && grade <= 94) {
+                alert('Very good')
+            } else if (grade >= 70 && grade <= 84) {
+                alert('Good')
+            } else if (grade >= 50 && grade <= 69) {
+                alert('Pass')
+            } else if (grade >= 40 && grade <= 49) {
+                alert('Poor')
+            } else if (grade <= 39) {
+                alert('Fail')
+            } else {
+                alert('Not a valid grade')
+            }
+        }
+
+        getGrade(75);
+
+        // Assignment
+        // create a variable for bank account balance and PIN
+
+        // if user tries to withdraw and PIN is wrong, alert Wrong password
+        // if user tries to withdraw and withdrawal amount is more than account balance, alert Insufficient funds
+        // if user tries to withdraw and PIN is correct and balance is sufficient, alert Withdrawal successful
     </script>
 </body>
 </html>
