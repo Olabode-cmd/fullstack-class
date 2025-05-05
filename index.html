@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>My First HTML Document</title>
 </head>
+
 <body>
     <h1>BEGINNER'S JAVASCRIPT</h1>
-
-
+    <button id="click">Click me</button>
+    <button class="no-click">Don't click</button>
 
     <script>
         // Javascript Class
@@ -14,7 +16,7 @@
         // Variables
         // A variable is a name for storing data values.
 
-        
+
         // console.log(name)
         // console.log
 
@@ -85,7 +87,7 @@
         // An array is a special variable that can hold more than one value at a time.
 
         let students = ["Mr Loius", "Esosa", "Daniel", "Michael", "John"]
-        console.log(students);
+        // console.log(students);
 
         // One thing you should know about arrays is that they are zero-indexed.
         // This means that the first element in an array is at index 0, the second element is at index 1, and so on.
@@ -115,7 +117,7 @@
             isElectric: true,
         }
 
-        console.log(esosa)
+        // console.log(esosa)
         // console.log(esosa.isOldEnough)
 
         // Classwork
@@ -212,13 +214,13 @@
         //     console.log("The student is old enough to drink.")
         // }
 
-        if (studentAge < 18) {
-            console.log("The student is not old enough to drink")
-        } else if (studentAge == 18) {
-            console.log("The student can now drink but gently")
-        } else {
-            console.log("The student is old enough to drink.")
-        }
+        // if (studentAge < 18) {
+        //     console.log("The student is not old enough to drink")
+        // } else if (studentAge == 18) {
+        //     console.log("The student can now drink but gently")
+        // } else {
+        //     console.log("The student is old enough to drink.")
+        // }
 
         // Classwork
 
@@ -230,10 +232,10 @@
         // AND - &&
         // OR - ||
 
-        function greetMe() {
-            let name = prompt('Tell me your name');
-            console.log(`Hello there ${name}`)
-        }
+        // function greetMe() {
+        //     let name = prompt('Tell me your name');
+        //     console.log(`Hello there ${name}`)
+        // }
 
         // greetMe();
 
@@ -242,7 +244,7 @@
         // Ask the user for the temperature today
 
         // if temperature is less than 24, console "it is cold"
-            // if temperature is between 24 and 32, console "it is warm"
+        // if temperature is between 24 and 32, console "it is warm"
         // if temperature is greater than 32 ,console "it is hot"
 
         function checkTemperature() {
@@ -289,12 +291,12 @@
         //     const number2 = prompt("Enter number 2")
         // }
 
-        
+
 
         function checkGreaterNumber() {
             const number1 = prompt("Enter number 1")
             const number2 = prompt("Enter number 2")
-             // Ternary operator
+            // Ternary operator
             number1 > number2 ? alert(`${number1}`) : alert(`${number2}`);
         }
 
@@ -369,7 +371,22 @@
             }
         }
 
-        getGrade(75);
+        // Regular function
+        function greet(name) {
+            console.log(`Hello ${name}`)
+        }
+
+        // greet('Olabode')
+
+        // Arrow function
+
+        const greetMe = () => {
+            console.log("Hello there")
+        }
+
+        greetMe();
+
+        // getGrade(75);
 
         // Assignment
         // create a variable for bank account balance and PIN
@@ -377,6 +394,114 @@
         // if user tries to withdraw and PIN is wrong, alert Wrong password
         // if user tries to withdraw and withdrawal amount is more than account balance, alert Insufficient funds
         // if user tries to withdraw and PIN is correct and balance is sufficient, alert Withdrawal successful
+
+
+        // Step by step
+        // I'll create variables for PIN and account balance
+        // I'll create a function called withdraw
+        // On withdrawal, if the user's PIN is wrong, alert "Wrong password"
+        // If the user's PIN is correct, check if the withdrawal amount
+        // is greater than the account balance, alert "Insufficient funds"
+
+        // Then I'll subtract the withdrawal amount from the account balance
+        const PIN = '1234';
+        const accountBalance = 10000;
+
+        function withdraw() {
+            const name = prompt("Enter your name");
+            const withdrawalAmount = prompt("Enter the amount you want to withdraw");
+            const accountPIN = prompt("Enter your PIN");
+
+            if (accountPIN !== PIN) {
+                alert("Wrong password")
+            } else if (accountPIN == PIN) {
+                if (withdrawalAmount > accountBalance) {
+                    alert("Insufficient funds")
+                } else {
+                    let newBalance = accountBalance - withdrawalAmount;
+                    alert(`Withdrawal successful. Your new balance is ${newBalance}`)
+                }
+            } else {
+                alert("Invalid credentials")
+            }
+        }
+
+        // withdraw();
+
+        // LOOPS
+        // A loop is a reiterable piece of code that depends on a condition. And there are 3 types of loops.
+
+        // For loop, while loop, and do-while loop.
+        // For loop
+        // for (let i = 0; i < 5; i++) {
+        //     console.log(i);
+        // }
+
+        // While loop.
+        // This loop will continue to exceute as long as a condition is true
+
+        // let amount = 0;
+        // while (amount < 5) {
+        //     console.log(i);
+        //     amount++;
+        // }
+
+        // Do-while loop
+        //  This loop will execute at least once, even if the condition is false.
+
+        // let i = 0;
+        // do {
+        //     console.log(i);
+        //     i++;
+        // } while (i < 5);
+
+        // Arrays and Methods
+        let fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+
+        // Array method - length
+        console.log(fruits.length)
+
+        // fruits.push("Grapes") // Add to the end of the array
+        // fruits.pop() // Remove from the end of the array
+
+        // fruits.shift() // Remove from the beginning of the array
+        // fruits.unshift("Strawberry") // Add to the beginning of the array
+        // console.log(fruits);
+
+        // fruits.map((fruit) => {
+        //     console.log(fruit)
+        // })
+
+        // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        // numbers.map((number) => {
+        //     console.log(number + 2)
+        // })
+
+
+        // Event Listener
+        // An event listener is a function 
+        // that waits for an event to occur before executing.
+
+        // How to pick out elements in Javascript
+        // querySelector
+        // getElementById
+
+        const button = document.getElementById("click")
+        const noButton = document.querySelector(".no-click")
+
+        function handleClick() {
+            alert("You clicked the button")
+        }
+        function handleNoClick() {
+            alert("You clicked the don't click button")
+        }
+
+        button.addEventListener("click", handleClick)
+        noButton.addEventListener("click", handleNoClick)
+
+        // handleClick()
     </script>
 </body>
+
 </html>
