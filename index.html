@@ -10,7 +10,43 @@
     <button id="click">Click me</button>
     <button class="no-click">Don't click</button>
 
+    <form>
+        <h1>Movie Ticket Booking</h1>
+
+        <select id="movies">
+            <option selected disabled>Select a movie</option>
+            <option value="20">Blacklist</option>
+            <option value="21">Interstellar</option>
+            <option value="15">The Prestige</option>
+            <option value="15">Moana</option>
+        </select>
+
+        <input type="number" placeholder="Number of tickets" id="tickets" />
+        <button type="button" id="calculate">Calculate price</button>
+
+        <h1>$ <span id="totalPrice">0</span></h1>
+    </form>
+
     <script>
+        const movies = document.getElementById("movies")
+        const tickets = document.getElementById("tickets")
+        const calculate = document.getElementById("calculate")
+
+        function calculatePrice() {
+            const selectedMovie = Number(movies.value);
+            const totalTickets = Number(tickets.value);
+
+            if (!selectedMovie || !totalTickets) {
+                alert("Please select a movie and number of tickets")
+                return
+            }
+            const totalPrice = selectedMovie * totalTickets;
+            console.log(totalPrice)
+            document.getElementById("totalPrice").textContent = totalPrice;
+        }
+
+        calculate.addEventListener("click", calculatePrice)
+        // NaN - Not a Number
         // Javascript Class
 
         // Variables
@@ -501,6 +537,27 @@
         noButton.addEventListener("click", handleNoClick)
 
         // handleClick()
+
+        // Class Project
+
+        // Build a form using HTML and CSS/Tailwind CSS
+        // Select a movie from a select dropdown
+        // Choose number of tickets
+        // On click of the button, calculate price based on selected movie and number of tickets.
+
+        // Using an object of data like this for the movies and their prices
+
+
+        // Assignment - Temperature converter
+
+        // Create a form with 2 inputs, one for temperature
+        // in Celsius and one for temperature in Fahrenheit
+
+        // Create a button to convert the temperature 
+        // from Celsius to Fahrenheit and vice versa.
+        
+        // On click of the button, convert the 
+        // temperature and display it in the other input.
     </script>
 </body>
 
