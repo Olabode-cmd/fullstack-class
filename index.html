@@ -6,25 +6,25 @@
 </head>
 
 <body>
-    <h1>BEGINNER'S JAVASCRIPT</h1>
+    <!-- <h1>BEGINNER'S JAVASCRIPT</h1>
     <button id="click">Click me</button>
-    <button class="no-click">Don't click</button>
+    <button class="no-click">Don't click</button> -->
 
     <form>
         <h1>Movie Ticket Booking</h1>
 
         <select id="movies">
             <option selected disabled>Select a movie</option>
-            <option value="20">Blacklist</option>
-            <option value="21">Interstellar</option>
-            <option value="15">The Prestige</option>
-            <option value="15">Moana</option>
+            <option value="20">Blacklist (&#8358; 20)</option>
+            <option value="21">Interstellar (&#8358; 21)</option>
+            <option value="15">The Prestige (&#8358; 15)</option>
+            <option value="15">Moana (&#8358; 15)</option>
         </select>
 
         <input type="number" placeholder="Number of tickets" id="tickets" />
         <button type="button" id="calculate">Calculate price</button>
 
-        <h1>$ <span id="totalPrice">0</span></h1>
+        <h1>&#8358; <span id="totalPrice">0</span></h1>
     </form>
 
     <script>
@@ -33,8 +33,8 @@
         const calculate = document.getElementById("calculate")
 
         function calculatePrice() {
-            const selectedMovie = Number(movies.value);
-            const totalTickets = Number(tickets.value);
+            const selectedMovie = Number(movies.value); // "20" instead of 20
+            const totalTickets = Number(tickets.value); // "6" instead of 6
 
             if (!selectedMovie || !totalTickets) {
                 alert("Please select a movie and number of tickets")
@@ -42,7 +42,8 @@
             }
             const totalPrice = selectedMovie * totalTickets;
             console.log(totalPrice)
-            document.getElementById("totalPrice").textContent = totalPrice;
+            // document.getElementById("totalPrice").textContent = totalPrice;
+            document.getElementById("totalPrice").innerHTML = `<p>${totalPrice}</p>`;
         }
 
         calculate.addEventListener("click", calculatePrice)

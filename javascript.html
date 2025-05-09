@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="max-w-7xl mx-auto pt-16">
+        <h1 class="text-4xl font-bold mb-6">Mapping</h1>
+        
+        <div class="grid grid-cols-4 gap-4" id="container">
+            <!-- This is where the JavaScript will inject the content -->
+
+        </div>
+    </div>
+    
+
+
+    <script>
+        const people = [
+            { name: 'Alice', lastName: 'Jane', email: 'alice@gmail.com', address: '123 Main St' },
+            { name: 'Bob', lastName: "Doe", email: 'bob@gmail.com', address: '456 Elm St' },
+            { name: 'Charlie', lastName: "Doe", email: 'charlie@gmail.com', address: '789 Oak St' },
+            { name: 'David', lastName: "Doe", email: 'david@gmail.com', address: '101 Pine St' },
+            { name: 'Eve', lastName: "Emily", email: 'eve@gmail.com', address: '202 Maple St' }
+        ];
+        
+        people.map((person) => {
+            document.getElementById('container').innerHTML += `
+            <div class="px-3 py-4 rounded-md border border-gray-300">
+                <h1 class="text-2xl font-bold">${person.name} ${person.lastName}</h1>
+                <p class="text-gray-700">${person.email}</p>
+                <p class="text-gray-700">${person.address}</p>
+            </div>
+            `;
+        });
+    </script>
+</body>
+</html>
