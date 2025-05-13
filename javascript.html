@@ -152,3 +152,76 @@
 
 </body>
 </html>
+
+<!-- HTML
+ 
+<select id="student">
+  <option disabled selected>Select student</option>
+  <option value="John Doe">John Doe</option>
+  <option value="Mary Jane">Mary Jane</option>
+  <option value="Matthew Wood">Matthew Wood</option>
+</select>
+
+<select id="subject">
+  <option disabled selected>Select subject</option>
+  <option value="maths">Mathematics</option>
+  <option value="english">English Language</option>
+  <option value="science">Basic Science</option>
+</select>
+
+<button id="checkScores">Check scores</button>
+
+<h1 id="output"></h1>
+
+JAVASCRIPT
+
+const selectedStudent = document.getElementById('student')
+const selectedSubject = document.getElementById('subject')
+const button = document.getElementById('checkScores')
+
+const data = [
+{
+name: "John Doe",
+maths: 46,
+english: 73,
+science: 65
+},
+{
+name: "Mary Jane",
+maths: 57,
+english: 90,
+science: 76
+},
+{
+name: "Matthew Wood",
+maths: 75,
+english: 57,
+science: 80
+}
+]
+
+function checkScores() {
+const studentName = selectedStudent.value;
+const subject = selectedSubject.value;
+
+if (!studentName || !subject) {
+output.textContent = "Please select both student and subject.";
+return;
+}
+
+const student = data.find(student => student.name === studentName);
+
+if (!student) {
+output.textContent = "Student not found.";
+return;
+}
+
+const score = student[subject];
+const passed = score >= 50;
+
+output.textContent = `${studentName} scored ${score} in ${subject}. ${passed ? "Passed ✅" : "Failed ❌"}`;
+}
+
+button.addEventListener('click', checkScores)
+
+-->
