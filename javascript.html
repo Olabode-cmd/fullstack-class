@@ -1,42 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Document</title>
+    <title>Color Document</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    <div class="max-w-7xl mx-auto pt-16">
-        <h1 class="text-4xl font-bold mb-6">Mapping</h1>
-        
-        <div class="grid grid-cols-4 gap-4" id="container">
-            <!-- This is where the JavaScript will inject the content -->
+    <!-- FOR COLORED BOX -->
+    <!-- <style>
+        .box {
+            padding: 10px;
+            height: 300px;
+            width: 400px;
+            background: gray;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .red {
+            background: red;
+        }
+        .blue {
+            background: blue;
+        }
+        .green {
+            background: green;
+        }
 
-        </div>
+    </style>
+    <div class="box" id="box">
+        <span id="text">colored box</span>
     </div>
-    
 
+    <button id="red">make it red</button>
+    <button id="blue">make it blue</button>
+    <button id="green">make it green</button>
 
     <script>
-        const people = [
-            { name: 'Alice', lastName: 'Jane', email: 'alice@gmail.com', address: '123 Main St' },
-            { name: 'Bob', lastName: "Doe", email: 'bob@gmail.com', address: '456 Elm St' },
-            { name: 'Charlie', lastName: "Doe", email: 'charlie@gmail.com', address: '789 Oak St' },
-            { name: 'David', lastName: "Doe", email: 'david@gmail.com', address: '101 Pine St' },
-            { name: 'Eve', lastName: "Emily", email: 'eve@gmail.com', address: '202 Maple St' }
-        ];
-        
-        people.map((person) => {
-            document.getElementById('container').innerHTML += `
-            <div class="px-3 py-4 rounded-md border border-gray-300">
-                <h1 class="text-2xl font-bold">${person.name} ${person.lastName}</h1>
-                <p class="text-gray-700">${person.email}</p>
-                <p class="text-gray-700">${person.address}</p>
+        const box = document.getElementById('box')
+        const redbutton = document.getElementById('red')
+        const bluebutton = document.getElementById('blue')
+        const greenbutton = document.getElementById('green')
+
+        const text = document.getElementById('text')
+
+        redbutton.addEventListener('click', () => {
+            box.classList.remove('blue', 'green')
+            box.classList.add('red')
+            text.textContent = "This box is red"
+        })
+
+        bluebutton.addEventListener('click', () => {
+            box.classList.remove('red')
+            box.classList.remove('green')
+            box.classList.add('blue')
+            text.textContent = "This box is blue"
+        })
+
+        greenbutton.addEventListener('click', () => {
+            box.classList.remove('blue')
+            box.classList.remove('red')
+            box.classList.add('green')
+            text.textContent = "This box is green"
+        })
+
+    </script> -->
+
+    <!-- For temperature converter -->
+    <div class="min-h-screen w-full bg-purple-600 py-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white px-4 py-6 rounded-md">
+                    <label for="" class="text-sm font-medium block">Enter Celcius temperature</label>
+                    <input id="celcius" type="text" class="px-3 py-2 5 border border-gray-300 w-full rounded-md mt-2">
+                </div>
+
+                <div class="bg-white px-4 py-6 rounded-md">
+                    <label for="" class="text-sm font-medium block">Enter Fahrenheit temperature</label>
+                    <input id="fahrenheit" type="text"
+                        class="px-3 py-2 5 border border-gray-300 w-full rounded-md mt-2">
+                </div>
             </div>
-            `;
-        });
+
+            <div class="mt-6 bg-white rounded-md px-2 py-3 mx-auto text-center">
+                <button id="convert"
+                    class="bg-purple-600 px-3 py-2 5 rounded-md text-white font-medium mb-6">Convert</button>
+                <h1 id="output" class="font-medium text-lg">0&deg;C</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const celcius = document.getElementById('celcius');
+        const fahrenheit = document.getElementById('fahrenheit')
+        const button = document.getElementById('convert')
+        const output = document.getElementById('output')
+
+        
+
+        button.addEventListener('click', () => {
+            // values
+            const celciusValue = Number(celcius.value)
+            const fahrenheitValue = Number(fahrenheit.value)
+
+            if (celciusValue && fahrenheitValue) {
+                alert('One input needs to be empty')
+                return;
+            } else if (!celciusValue && fahrenheitValue) {
+                calculateCelcius(fahrenheitValue);
+            } else if (celciusValue && !fahrenheitValue) {
+                calculateFahrenheit(celciusValue);
+            } else {
+                alert('Invalid')
+            }
+        })
+
+
+        function calculateCelcius(fahrenheit) {
+            //  (°F - 32) * 5/9
+            const calc = (fahrenheit - 32) * 5/9;
+            output.innerHTML = `<h1 id="output" class="font-medium text-lg">${calc}&deg;C</h1>`
+        }
+
+        function calculateFahrenheit(celcius) {
+            // (°C × 9/5) + 32
+            const calc = (celcius * 9/5) + 32;
+            output.innerHTML = `<h1 id="output" class="font-medium text-lg">${calc}&deg;F</h1>`
+        }
+
+        // Classwork
+
+        // Create an array of students and their scores in
+        // several subjects (over 100)
+
+        // Then create a form that lets you select a student
+        // and a subject
+
+        // Then write a function to check if the student passed
+        // that subject
+
+        // Pass mark: 50.
+
+        // To search for data in an array, use 
+        // the array.find method.
     </script>
+
 </body>
 </html>
