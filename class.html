@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Document</title>
+</head>
+
+<body>
+    <select id="student">
+        <option selected disabled value="">Select student</option>
+        <option value="John Doe">John Doe</option>
+        <option value="Mary Jane">Mary Jane</option>
+        <option value="Matthew Wood">Matthew Wood</option>
+    </select>
+
+    <select id="subject">
+        <option selected disabled value="">Select subject</option>
+        <option value="maths">Mathematics</option>
+        <option value="english">English Language</option>
+        <option value="science">Basic Science</option>
+    </select>
+
+    <button id="checkScores">Check scores</button>
+
+    <h1 id="output"></h1>
+    <!-- Create an array of objects where each object
+     has a name and isAdmin boolean -->
+
+    <!-- Create a form that allows you select a
+     list of users and a Check button -->
+
+    <!-- On click of the check button, check if
+     the selected user is an admin -->
+
+    <!-- If user cannot be found, show a user not found
+     display message -->
+
+    <!-- Depending on that, display the relevant message
+      on screen e.g, so-and-so is an admin -->
+
+    <script>
+        const selectedStudent = document.getElementById('student')
+        const selectedSubject = document.getElementById('subject')
+        const button = document.getElementById('checkScores')
+        const output = document.getElementById('output')
+
+        const data = [
+            {
+                name: "John Doe",
+                maths: 46,
+                english: 73,
+                science: 65
+            },
+            {
+                name: "Mary Jane",
+                maths: 57,
+                english: 90,
+                science: 76
+            },
+            {
+                name: "Matthew Wood",
+                maths: 75,
+                english: 57,
+                science: 80
+            }
+        ]
+
+        function checkScores() {
+            const studentName = selectedStudent.value;
+            const subject = selectedSubject.value;
+
+            if (!studentName || !subject) {
+                output.textContent = "Please select both student and subject.";
+                return;
+            }
+
+            console.log(`Student name: ${studentName}, subject: ${subject}`);
+            const student = data.find(student => student.name === studentName);
+            const score = student[subject];
+            console.log(score)
+            const passed = score >= 50; // boolean
+            console.log(passed)
+
+            // string, number, arrays, objects
+            // const isMarried = false
+
+            output.textContent = `${studentName} scored ${score} in ${subject}. ${passed ? "Passed ✅" : "Failed ❌"}`;
+        }
+
+        button.addEventListener('click', checkScores)
+        // data.map((student) => {
+            //     console.log(student.name)
+            // })
+
+            // const student = data.find((student) => {
+            //     student.name === studentName
+            // })
+
+            // const youngerStudent = data.filter((student) => {
+            //     student.age < 18
+            // })
+
+        
+
+
+        // const selectedStudent = document.getElementById('student')
+        //     const selectedSubject = document.getElementById('subject')
+        //     const button = document.getElementById('checkScores')
+
+        //     const data = [
+        //         {
+        //             name: "John Doe",
+        //             maths: 46,
+        //             english: 73,
+        //             science: 65
+        //         },
+        //         {
+        //             name: "Mary Jane",
+        //             maths: 57,
+        //             english: 90,
+        //             science: 76
+        //         },
+        //         {
+        //             name: "Matthew Wood",
+        //             maths: 75,
+        //             english: 57,
+        //             science: 80
+        //         }
+        //     ]
+
+        //     function checkScores() {
+        //         const studentName = selectedStudent.value;
+        //         const subject = selectedSubject.value;
+
+        //         if (!studentName || !subject) {
+        //             output.textContent = "Please select both student and subject.";
+        //             return;
+        //         }
+
+        //         const student = data.find(student => student.name === studentName);
+
+        //         if (!student) {
+        //             output.textContent = "Student not found.";
+        //             return;
+        //         }
+
+        //         const score = student[subject];
+        //         const passed = score >= 50;
+
+        //         output.textContent = `${studentName} scored ${score} in ${subject}. ${passed ? "Passed ✅" : "Failed ❌"}`;
+        //     }
+
+        //     button.addEventListener('click', checkScores)
+
+
+        // 1. Design the login form in the group
+        // 2. Create an array of objects with
+        // data of username and password
+
+        // 3. On click of the submit button
+        // Collect username and password values
+
+        // 4. If username cannot be found in your data...
+        // Alert User not found
+
+        // If username can be found but the password in the data 
+        // is different from the one in the form, alert wrong password
+
+        // If both are correct, alert Login successful
+
+        // sample data
+
+        // const data = [
+        //     {
+        //         username: 'johnnydoe',
+        //         password: '23123443'
+        //     },
+        //     {
+        //         username: 'emilys',
+        //         password: 'emilyspass'
+        //     }
+        //     // make 7 more
+        // ]
+    </script>
+</body>
+
+</html>
